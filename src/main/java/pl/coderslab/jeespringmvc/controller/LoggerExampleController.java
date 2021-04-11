@@ -19,6 +19,6 @@ public class LoggerExampleController {
         int b = 5;
         LOGGER.debug("a = {}, b = {} ", a, b);
 
-        return "/home.jsp";
+        return "home";
     }
 }

@@ -9,6 +9,13 @@
 <html>
 <head>
     <title>home.jsp</title>
+
+    <style>
+        body {
+            background-color: ${backgroundColor};
+            color: ${textColor};
+        }
+    </style>
 </head>
 <body>
 <h1>first controller!</h1>
