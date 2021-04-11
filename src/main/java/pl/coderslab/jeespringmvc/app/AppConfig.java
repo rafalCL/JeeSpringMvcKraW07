@@ -17,5 +17,17 @@ import java.util.List;
 @ComponentScan("pl.coderslab.jeespringmvc")
 @EnableWebMvc
 public class AppConfig implements WebMvcConfigurer {
+    @Override
+    public void configureDefaultServletHandling(
+            DefaultServletHandlerConfigurer configurer) {
+        configurer.enable();
+    }
 
+    @Override
+    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+        StringHttpMessageConverter stringConverter = new StringHttpMessageConverter();
+        stringConverter.setSupportedMediaTypes(Arrays.asList(new MediaType("text", "html",
+                Charset.forName("UTF-8"))));
+        converters.add(stringConverter);
+    }
 }
