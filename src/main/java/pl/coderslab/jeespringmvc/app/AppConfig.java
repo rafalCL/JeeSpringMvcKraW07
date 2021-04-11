@@ -24,13 +24,13 @@ public class AppConfig implements WebMvcConfigurer {
         configurer.enable();
     }
 
-    @Override
-    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-        StringHttpMessageConverter stringConverter = new StringHttpMessageConverter();
-        stringConverter.setSupportedMediaTypes(Arrays.asList(new MediaType("text", "html",
-                Charset.forName("UTF-8"))));
-        converters.add(stringConverter);
-    }
+//    @Override
+//    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+//        StringHttpMessageConverter stringConverter = new StringHttpMessageConverter();
+//        stringConverter.setSupportedMediaTypes(Arrays.asList(new MediaType("text", "html",
+//                Charset.forName("UTF-8"))));
+//        converters.add(stringConverter);
+//    }
 
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {
